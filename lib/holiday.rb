@@ -26,7 +26,20 @@ def all_winter_holiday_supplies(holiday_hash)
   end.flatten
 end
 
-
+def all_supplies_in_holidays(holiday_hash)
+  holiday_hash.each do |season, holiday|
+    season_string = season.to_s.capitalize! + ":"
+      holiday.each do |holiday, supplies|
+        holiday_string = holiday.to_s
+        binding.pry
+          holiday_array = holiday_string.split(" ")
+            capital_holiday = holiday_array.map {|holiday| holiday.capitalize!}
+              capital_holiday_string = capital_holiday.join
+        puts season_string
+        puts capital_holiday_string
+    end
+  end
+end
 
 def all_holidays_with_bbq(holiday_hash)
   bbq_holidays = []
