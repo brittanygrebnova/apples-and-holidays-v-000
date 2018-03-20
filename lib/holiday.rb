@@ -34,7 +34,7 @@ def all_supplies_in_holidays(holiday_hash)
         holiday_string = holiday.to_s
           holiday_array = holiday_string.split("_")
             capital_holiday = holiday_array.map {|holiday| holiday.capitalize!}
-              capital_holiday_string = capital_holiday.join("   ") + ": "
+              capital_holiday_string = capital_holiday.join(" ") + ": "
                 supplies_string = supplies.join(", ")
         puts capital_holiday_string + supplies_string
     end
