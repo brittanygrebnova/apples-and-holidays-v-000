@@ -31,7 +31,7 @@ def all_supplies_in_holidays(holiday_hash)
     season_string = season.to_s.capitalize! + ":"
       holiday.each do |holiday, supplies|
         holiday_string = holiday.to_s
-          holiday_array = holiday_string.split(" ")
+          holiday_array = holiday_string.split("_")
           binding.pry
             capital_holiday = holiday_array.map {|holiday| holiday.capitalize!}
               capital_holiday_string = capital_holiday.join
